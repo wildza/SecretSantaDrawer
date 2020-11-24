@@ -36,10 +36,11 @@ def main():
             Fin = False
             main()
             break    
-    if Fin:       
+    if Fin:      
         for item in PairsDict.items():            
             rec = json.dumps(item[1]).split('{')[1].split(':')[1].split(' ')[1].split('}')[0].split('"')[1]
             sndr = json.dumps(item[1]).split('{')[1].split(':')[0].split('"')[1]
+             # -WARNING- A LOOT OF ELIF STATEMENTS INCOMING, plese don't kill me :) -WARNING- #
             if sndr == 'Name1':
                 client.sendMessage(rec, thread_id= 'TODO: GET userid VALUE FROM FACEBOOK PROFILE PAGE SOURCE')  
             elif sndr == 'Name2':
